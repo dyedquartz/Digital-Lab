@@ -55,5 +55,6 @@ class ComputerCoreEntity:
             ScreenHandlerContext.create(world, pos)
         )
 
+
     override fun getDisplayName(): Text = LiteralText("")
 }

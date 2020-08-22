@@ -6,10 +6,7 @@ import com.thinkslynk.fabric.annotations.registry.RegisterBlock
 import com.thinkslynk.fabric.annotations.registry.RegisterItem
 import com.thinkslynk.fabric.helpers.AnnotationHelpers
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.minecraft.block.Block
-import net.minecraft.block.BlockEntityProvider
-import net.minecraft.block.BlockState
-import net.minecraft.block.Material
+import net.minecraft.block.*
 import net.minecraft.block.entity.BlockEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.util.ActionResult
@@ -24,12 +21,11 @@ import org.apache.logging.log4j.spi.LoggerAdapter
 @RegisterBlock(DigitalLabMod.identifier, ComputerCore.NAME)
 @RegisterItem(DigitalLabMod.identifier, ComputerCore.NAME, AnnotationHelpers.ItemGroup.MISC)
 class ComputerCore:
-    Block(
+    BlockWithEntity(
         FabricBlockSettings
             .of(Material.METAL)
             .hardness(4.0f)
-    ),
-    BlockEntityProvider
+    )
 {
     companion object {
         const val NAME = "computer_core"

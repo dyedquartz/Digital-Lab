@@ -15,7 +15,7 @@ object DigitalLabModClient: ClientModInitializer {
 
     override fun onInitializeClient() {
         log.info("Initializing digital lab mod client side...")
-        ScreenRegistry.register(
+        ScreenRegistry.register<ExampleGuiDescription, ExampleBlockScreen>(
             DigitalLabMod.SCREEN_HANDLER_TYPE
         ) { gui: ExampleGuiDescription, inventory: PlayerInventory, title: Text ->
             ExampleBlockScreen(

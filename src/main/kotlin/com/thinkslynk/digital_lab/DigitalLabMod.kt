@@ -25,7 +25,7 @@ object DigitalLabMod: ModInitializer {
         ItemRegistryGenerated.register()
         BlockEntityRegistryGenerated.register()
         SCREEN_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(
-            Identifier(identifier, "gui")
+            Identifier(identifier, ComputerCore.NAME)
         ) { syncId: Int, inventory: PlayerInventory ->
             ExampleGuiDescription(
                 SCREEN_HANDLER_TYPE,
