@@ -27,7 +27,10 @@ class ComputerCoreEntity:
     BaseInventory,
     NamedScreenHandlerFactory
 {
-    private val items = DefaultedList.ofSize(2, ItemStack.EMPTY)
+    companion object{
+        const val INVENTORY_SIZE = 1
+    }
+    private val items = DefaultedList.ofSize(INVENTORY_SIZE, ItemStack.EMPTY)
 
     override fun getItems(): DefaultedList<ItemStack> = items
 

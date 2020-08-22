@@ -1,5 +1,6 @@
 package com.thinkslynk.digital_lab.gui
 
+import com.thinkslynk.digital_lab.entity.ComputerCoreEntity
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription
 import io.github.cottonmc.cotton.gui.widget.WGridPanel
 import io.github.cottonmc.cotton.gui.widget.WItemSlot
@@ -16,12 +17,9 @@ class ExampleGuiDescription(
         type,
         syncId,
         playerInventory,
-        getBlockInventory(context, INVENTORY_SIZE),
+        getBlockInventory(context, ComputerCoreEntity.INVENTORY_SIZE),
         getBlockPropertyDelegate(context)
     ) {
-    companion object {
-        private const val INVENTORY_SIZE = 1
-    }
 
     init {
         val root = WGridPanel()

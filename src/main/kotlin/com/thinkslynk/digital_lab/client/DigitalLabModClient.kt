@@ -7,11 +7,14 @@ import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry
 import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.text.Text
+import org.apache.logging.log4j.LogManager
 
 
-class DigitalLabModClient: ClientModInitializer {
+object DigitalLabModClient: ClientModInitializer {
+    val log = LogManager.getLogger(DigitalLabModClient::class.java)
 
     override fun onInitializeClient() {
+        log.info("Initializing digital lab mod client side...")
         ScreenRegistry.register(
             DigitalLabMod.SCREEN_HANDLER_TYPE
         ) { gui: ExampleGuiDescription, inventory: PlayerInventory, title: Text ->
