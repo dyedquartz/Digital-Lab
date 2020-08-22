@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "digital_lab",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Digital Lab",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -19,16 +19,25 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      {
+        "adapter": "kotlin",
+        "value": "com.thinkslynk.digital_lab.DigitalLabMod"
+      }
+    ],
+
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "com.thinkslynk.digital_lab.client.DigitalLabModClient"
+      }
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.8.7",
     "fabric": "*",
-    "fabric-language-kotlin": "*",
+    "fabric-language-kotlin": ">=1.3.72",
     "minecraft": "1.16.x"
   },
   "suggests": {

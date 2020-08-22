@@ -1,0 +1,7 @@
+{
+  "blocks": [{
+    "class": "com.thinkslynk.digital_lab.block.ComputerCore",
+    "name": "computer-core"
+  }],
+  "items": []
+}
