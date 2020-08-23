@@ -9,6 +9,7 @@ import net.minecraft.util.collection.DefaultedList
 
 interface BaseInventory : Inventory {
     fun getItems(): DefaultedList<ItemStack>
+    fun getMaxSize(): Int
 
     override fun clear() = getItems().clear()
     override fun size(): Int = getItems().size
